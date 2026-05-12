@@ -4,8 +4,6 @@ import About from './components/About'
 import Education from './components/Education'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
-import Music from './components/Music'
-import Gallery from './components/Gallery'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -22,8 +20,8 @@ function App() {
         <Education />
         <Experience />
         <Skills />
-        <Music />
-        <Gallery />
+        {/* <Music /> */}
+        {/* <Gallery /> */}
         <Contact />
       </main>
       <Footer />

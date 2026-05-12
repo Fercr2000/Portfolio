@@ -2430,9 +2430,82 @@ a:hover {
    SOBRE MÍ — Layout con foto + texto narrativo + highlights
    ============================================================ */
 
+/* ============================================================
+   SOBRE MÍ — Fondo dinámico (degradado rico + líneas + rayo)
+   ============================================================ */
+
 .about-section {
     position: relative;
     overflow: hidden;
+    background:
+        radial-gradient(ellipse at 20% 30%, rgba(74, 144, 226, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(44, 93, 158, 0.15) 0%, transparent 50%),
+        linear-gradient(135deg, #0f1426 0%, #131a2e 50%, #0f1426 100%);
+}
+
+/* Capa de líneas diagonales sutiles (textura de fondo) */
+.about-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(45deg,
+            transparent 0,
+            transparent 80px,
+            rgba(74, 144, 226, 0.035) 80px,
+            rgba(74, 144, 226, 0.035) 81px,
+            transparent 81px,
+            transparent 180px,
+            rgba(111, 168, 238, 0.05) 180px,
+            rgba(111, 168, 238, 0.05) 182px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Capa del RAYO de luz que cruza en diagonal */
+.about-section::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(115deg,
+            transparent 0%,
+            transparent 35%,
+            rgba(111, 168, 238, 0.07) 45%,
+            rgba(168, 202, 245, 0.15) 50%,
+            rgba(111, 168, 238, 0.07) 55%,
+            transparent 65%,
+            transparent 100%);
+    animation: about-rayo 9s linear infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes about-rayo {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    70% {
+        left: 100%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
 }
 
 .about-container {
@@ -2751,3 +2824,6 @@ a:hover {
     margin: 0;
     line-height: 1.35;
 }
+
+
+
