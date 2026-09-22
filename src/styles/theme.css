@@ -123,6 +123,45 @@ section {
     background: var(--gradient-section-alt);
 }
 
+/* Fondo del Hero reutilizable: degradado profundo + orbes difuminados */
+.section-hero-bg {
+    background: var(--gradient-hero);
+    overflow: hidden;
+}
+
+.section-hero-bg::before,
+.section-hero-bg::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section-hero-bg::before {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+    top: -180px;
+    left: -150px;
+}
+
+.section-hero-bg::after {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--color-primary-dark) 0%, transparent 70%);
+    bottom: -280px;
+    right: -200px;
+}
+
+/* El contenido va por encima de los orbes */
+.section-hero-bg>.container {
+    position: relative;
+    z-index: 1;
+}
+
 /* Línea divisoria fina entre secciones */
 .section-divider {
     position: relative;
@@ -2240,6 +2279,31 @@ a:hover {
     }
 }
 
+/* Cada experiencia lleva su propio nodo en la línea */
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item+.timeline-item {
+    margin-top: 2rem;
+}
+
+.timeline-item .timeline-node {
+    left: -52px;
+    top: 8px;
+}
+
+/* Solo el puesto actual late; los anteriores quedan apagados */
+.timeline-node:not(.timeline-node-current) {
+    animation: none;
+    background: radial-gradient(circle, rgba(111, 168, 238, 0.7) 30%, rgba(74, 144, 226, 0.2) 70%);
+    border-color: rgba(168, 202, 245, 0.55);
+    box-shadow:
+        0 0 0 4px rgba(15, 20, 38, 1),
+        0 0 0 6px rgba(74, 144, 226, 0.18),
+        0 0 14px rgba(74, 144, 226, 0.35);
+}
+
 /* ============================================================
    CARD DE EXPERIENCIA
    ============================================================ */
@@ -2424,6 +2488,33 @@ a:hover {
     margin-top: 0.5rem;
     transform: rotate(45deg);
     box-shadow: 0 0 5px rgba(111, 168, 238, 0.5);
+}
+
+/* Tecnologías usadas en el puesto */
+.exp-tech-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1.3rem;
+    padding-top: 1.1rem;
+    border-top: 1px solid rgba(74, 144, 226, 0.12);
+}
+
+.exp-tech-chip {
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    background: rgba(74, 144, 226, 0.08);
+    border: 1px solid rgba(74, 144, 226, 0.15);
+    color: #c4d4e8;
+    letter-spacing: -0.005em;
+    transition: all 0.25s ease;
+}
+
+.exp-card:hover .exp-tech-chip {
+    background: rgba(74, 144, 226, 0.14);
+    border-color: rgba(74, 144, 226, 0.28);
 }
 
 /* ============================================================

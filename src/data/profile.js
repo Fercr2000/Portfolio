@@ -10,7 +10,7 @@ export const profile = {
   personal: {
     name: "Fernando J. Camacho Rizquez",
     shortName: "Fernando Camacho",
-    title: "Estudiante de Ingeniería Informática",
+    title: "Ingeniero Informático",
     subtitle: "Desarrollo de Software · Dirección Musical · Fotografía",
     location: "Martos (Jaén), España",
     email: "fernandojosecamachorizquez@gmail.com",
@@ -105,22 +105,38 @@ export const profile = {
     },
   ],
 
-  // Experiencia profesional
+  // Experiencia profesional — de más reciente a más antigua
   experience: [
     {
       id: 1,
+      role: "Ingeniero de Sistemas",
+      company: "Valeo",
+      program: "Programa Escuela Empresa · Martos (Jaén)",
+      period: "Julio 2026 – Actualidad",
+      duration: "Beca de 9 meses",
+      current: true,
+      tasks: [
+        "Gestión de requisitos de sistemas de iluminación en un entorno conforme a Automotive SPICE: análisis de la especificación del cliente OEM, derivación a requisitos de sistema y trazabilidad en Codebeamer e IBM DOORS.",
+        "Diseño de sistemas de iluminación a nivel de parametrización de funciones y definición de elementos físicos, con análisis de las comunicaciones del bus CAN mediante Vector CANoe y Saleae Logic 2.",
+        "Desarrollo de herramientas internas en Python, TypeScript y Google Apps Script que automatizan tareas repetitivas de ingeniería, reducen tiempos y previenen errores manuales, incluidas integraciones con IA para agilizar revisiones.",
+        "Seguimiento del trabajo en Jira y reuniones técnicas en inglés con ingenieros de otras sedes y con el cliente OEM.",
+      ],
+      technologies: ["Automotive SPICE", "Codebeamer", "IBM DOORS", "Bus CAN", "Vector CANoe", "Python", "TypeScript", "Jira"],
+    },
+    {
+      id: 2,
       role: "Técnico en prácticas",
       company: "Obispado de Jaén",
       program: "Programa Ícaro · Universidad de Jaén",
       period: "Septiembre 2025 – Abril 2026",
-      duration: "6 meses",
+      duration: "8 meses",
+      current: false,
       tasks: [
-        "Desarrollo integral de una intranet corporativa actualmente en producción, empleada para el control de empleados y la gestión interna de la organización.",
-        "Desarrollo de soluciones software a medida para la gestión personalizada de eventos.",
-        "Implementación y despliegue de nuevo hardware de red, así como mantenimiento de equipos e infraestructura informática.",
-        "Atención al usuario interno y resolución de incidencias técnicas.",
+        "Desarrollo integral de una intranet corporativa, actualmente en producción, para el control de personal y la gestión interna de la organización, con React, Supabase y Vercel.",
+        "Diseño e implantación de un sistema de control de accesos sobre Google Workspace: aplicaciones web en HTML y Google Apps Script con autenticación mediante la cuenta corporativa y Google Sheets como almacén de datos.",
+        "Despliegue y configuración de hardware de red, mantenimiento de la infraestructura informática y resolución de incidencias a usuarios internos.",
       ],
-      technologies: ["Desarrollo web", "Bases de datos", "Redes", "Soporte técnico"],
+      technologies: ["React", "Supabase", "Vercel", "Google Apps Script", "HTML", "Redes"],
     },
   ],
 
@@ -132,43 +148,110 @@ export const profile = {
         title: "Lenguajes",
         items: [
           { name: "Python", icon: "SiPython", size: "big" },
+          { name: "TypeScript", icon: "SiTypescript", size: "big" },
           { name: "C++", icon: "SiCplusplus", size: "big" },
           { name: "SQL", icon: "SiPostgresql", size: "big" },
-          { name: "C", icon: "SiC", size: "big" },
+          { name: "C", icon: "SiC", size: "med" },
           { name: "Java", icon: "FaJava", size: "med" },
           { name: "JavaScript", icon: "SiJavascript", size: "med" },
-           { name: "HTML5", icon: "SiHtml5", size: "med" },
-          { name: "CSS3", icon: "SiCss", size: "med" },
+          { name: "Bash", icon: "SiGnubash", size: "med" },
+          { name: "Google Apps Script", icon: "SiGoogleappsscript", size: "med" },
         ],
       },
       {
-        id: "frameworks",
-        title: "Frameworks",
+        id: "webdev",
+        title: "Desarrollo web",
         items: [
           { name: "React", icon: "SiReact", size: "big" },
           { name: "Flutter", icon: "SiFlutter", size: "med" },
+          { name: "HTML5", icon: "SiHtml5", size: "med" },
+          { name: "CSS3", icon: "SiCss", size: "med" },
           { name: "Bootstrap", icon: "SiBootstrap", size: "med" },
+        ],
+      },
+      {
+        id: "ai",
+        title: "Inteligencia artificial",
+        items: [
+          { name: "RAG", icon: "IconRag", size: "big" },
+          { name: "Integración de LLMs", icon: "IconLlm", size: "med" },
         ],
       },
       {
         id: "databases",
         title: "Bases de datos",
         items: [
+          { name: "Supabase", icon: "SiSupabase", size: "big" },
           { name: "MySQL", icon: "SiMysql", size: "med" },
         ],
       },
       {
-        id: "tools",
-        title: "Herramientas",
+        id: "devops",
+        title: "DevOps y entorno",
         items: [
-          { name: "Git", icon: "SiGit", size: "med" },
-          { name: "Docker", icon: "SiDocker", size: "med" },
-          { name: "Linux", icon: "SiLinux", size: "med" },
+          { name: "Docker", icon: "SiDocker", size: "big" },
+          { name: "Git", icon: "SiGit", size: "big" },
+          { name: "Docker Compose", icon: "SiDocker", size: "med" },
+          { name: "Vercel", icon: "SiVercel", size: "med" },
           { name: "VS Code", icon: "SiVisualstudiocode", size: "med" },
+        ],
+      },
+      {
+        id: "systems",
+        title: "Sistemas y redes",
+        items: [
+          { name: "Linux", icon: "SiLinux", size: "big" },
+          { name: "Windows", icon: "FaWindows", size: "med" },
+          { name: "TCP/IP", icon: "IconNetwork", size: "med" },
+          { name: "Administración de sistemas", icon: "IconServer", size: "med" },
+        ],
+      },
+      {
+        id: "systems-engineering",
+        title: "Ingeniería de sistemas",
+        items: [
+          { name: "Automotive SPICE", icon: "IconAspice", size: "big" },
+          { name: "Gestión de requisitos", icon: "IconRequirements", size: "big" },
+          { name: "Codebeamer", icon: "IconTraceability", size: "med" },
+          { name: "IBM DOORS", icon: "IconDoors", size: "med" },
+          { name: "Jira", icon: "SiJira", size: "med" },
+        ],
+      },
+      {
+        id: "automotive",
+        title: "Automoción y electrónica",
+        items: [
+          { name: "Bus CAN", icon: "IconCanBus", size: "big" },
+          { name: "Vector CANoe", icon: "IconOscilloscope", size: "med" },
+          { name: "Saleae Logic 2", icon: "IconLogicAnalyzer", size: "med" },
         ],
       },
     ],
   },
+
+  // Idiomas
+  languages: [
+    {
+      id: 1,
+      icon: "spain",
+      language: "Español",
+      level: "Lengua materna",
+      status: "completed",
+      statusLabel: "Nativo",
+      detail: "España",
+      note: "Uso nativo en entornos técnicos y académicos",
+    },
+    {
+      id: 2,
+      icon: "uk",
+      language: "Inglés",
+      level: "Nivel profesional",
+      status: "active",
+      statusLabel: "C1 en curso",
+      detail: "Cambridge C1 Advanced",
+      note: "Examen previsto al final del curso 2026/27",
+    },
+  ],
   // Trabajo Fin de Grado (lo integramos como destacado)
   tfg: {
     title: "Sistema avanzado de recuperación de información musical",

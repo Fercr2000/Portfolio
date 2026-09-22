@@ -77,7 +77,7 @@ function EduCard({ item, index }) {
 
 function Education() {
   return (
-    <section id="education">
+    <section id="education" className="section-hero-bg">
       <Container>
         {/* SVG con el degradado, definido una sola vez */}
         <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">

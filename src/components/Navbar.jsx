@@ -27,6 +27,7 @@ function Navbar() {
             <Nav.Link href="#education" className="nav-link-custom">Formación</Nav.Link>
             <Nav.Link href="#experience" className="nav-link-custom">Experiencia</Nav.Link>
             <Nav.Link href="#skills" className="nav-link-custom">Habilidades</Nav.Link>
+            <Nav.Link href="#languages" className="nav-link-custom">Idiomas</Nav.Link>
             <Nav.Link href="#music" className="nav-link-custom">Música</Nav.Link>
             <Nav.Link href="#gallery" className="nav-link-custom">Galería</Nav.Link>
             <Nav.Link href="#contact" className="nav-link-custom">Contacto</Nav.Link>

@@ -4,6 +4,7 @@ import About from './components/About'
 import Education from './components/Education'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
+import Languages from './components/Languages'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -20,6 +21,7 @@ function App() {
         <Education />
         <Experience />
         <Skills />
+        <Languages />
         {/* <Music /> */}
         {/* <Gallery /> */}
         <Contact />
