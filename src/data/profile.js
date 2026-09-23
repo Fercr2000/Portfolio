@@ -276,13 +276,13 @@ export const profile = {
     ],
   },
 
-  // Galería de fotografía (las añadiremos cuando tengas imágenes)
+  // Galería de fotografía.
+  // Las fotos se cargan solas desde src/assets/gallery/: basta con dejarlas
+  // ahí. El número inicial del nombre decide el orden (01-, 02-, ...).
   gallery: {
     headline: "Fotografía y videografía",
-    description: "Apasionado de la fotografía y la videografía profesional, donde combino sensibilidad artística con dominio técnico del equipo y la postproducción.",
-    photos: [
-      // Cuando tengas fotos, las pondremos así:
-      // { id: 1, src: "/images/foto1.jpg", alt: "Concierto en la Catedral", caption: "Concierto Navidad 2024" },
-    ],
+    teaserText: "Cuando no estoy programando ni dirigiendo, suelo andar detrás de una de estas.",
+    teaserAction: "Revelar",
+    description: "Disparo en RAW y revelo hasta que la foto dice lo que vi yo, no lo que registró el sensor. Sin títulos ni fechas: si una imagen necesita explicación, es que no funciona.",
   },
 };

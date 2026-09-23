@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Originales de las fotos (pesados, no se suben)
+fotos-originales
